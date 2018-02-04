@@ -1,3 +1,6 @@
 # network-batch-file
 
-a batch file to run ping,tracert and ipconfig, and to save reports.
+A Batch file that can be used to run ping,tracert and ipconfigtests to screen or saveed to file.
+
+##Version: 2.0.2
+>Release Date: 4th February 2018
