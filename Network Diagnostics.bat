@@ -1,8 +1,10 @@
 @ECHO OFF  
 
-REM Version: 2.0.2
+REM Version: 2.0.3
 REM Author: Iain Mair
-REM Release Date: 4th February 2018
+REM Release Date: 10th February 2018
+REM Github repository: https://github.com/el3302/network-batch-file
+REM Licence: Microsoft Public License (MS-PL) - https://github.com/el3302/network-batch-file/blob/master/LICENSE
 
 TITLE Network Diagnostic Tests for %computername%
 
