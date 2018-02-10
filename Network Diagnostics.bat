@@ -26,6 +26,7 @@ ECHO  r. run tests 1-4 and save to file on desktop
 ECHO  x. exit testing
 ECHO.
 
+SET CHOOSE= " "
 SET /P CHOOSE=  Hello %USERNAME%, what do you want to do?: 
 GOTO %CHOOSE%
 
