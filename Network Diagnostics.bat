@@ -79,22 +79,22 @@ ping /t %CHOOSE%
 GOTO end
 
 :r
-MKDIR C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%
-CD C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%
+MKDIR C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
+CD C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
 CLS
 ECHO Running tests and sending to file
 ECHO.
 ipconfig /all > IPCONFIG_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%.txt
 ECHO IPCONFIG saved
 ECHO.
-ping google.com > PING_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%.txt
+ping google.com > PING_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
 ECHO PING google.com saved
 ECHO.
-ping 8.8.8.8 > PINGDNS_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%.txt
+ping 8.8.8.8 > PINGDNS_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
 ECHO Ping 8.8.8.8 saved
 ECHO.
 ECHO Running Trace Route...
-tracert google.com > TRACERT_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%.txt
+tracert google.com > TRACERT_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
 ECHO TRACERT saved
 ECHO.
 ECHO All Files Saved to Desktop 
