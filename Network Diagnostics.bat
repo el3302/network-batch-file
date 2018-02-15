@@ -10,9 +10,7 @@ TITLE Network Diagnostic Tests for %computername%
 
 :start
 ECHO.
-ECHO  NETWORK DIAGNOSTIC TESTS.
-ECHO.
-ECHO  %date% @ %time%
+ECHO  NETWORK DIAGNOSTIC TESTS. 
 ECHO.
 ECHO  1. run ip config
 ECHO.
@@ -29,7 +27,7 @@ ECHO  x. exit testing
 ECHO.
 
 SET CHOOSE= " "
-SET /P CHOOSE=  Hello %USERNAME%, what do you want to do?: 
+SET /P CHOOSE=  [%date% @ %time%] Hello %USERNAME%, what do you want to do?: 
 GOTO %CHOOSE%
 
 :1
@@ -59,14 +57,14 @@ GOTO end
 :5
 CLS
 ECHO PING a Custom Address
-SET /P CHOOSE= What Address do you want to PING?: 
+SET /P CHOOSE= [%date% @ %time%] What Address do you want to PING?: 
 ping %CHOOSE%
 GOTO end
 
 :6
 CLS
 ECHO Run TRACE ROUTE on a Custom Address
-SET /P CHOOSE= What Address do you want to run TRACERT on?: 
+SET /P CHOOSE= [%date% @ %time%] What Address do you want to run TRACERT on?: 
 tracert %CHOOSE%
 GOTO end
 
@@ -76,7 +74,7 @@ ECHO Continuous PING of a Custom Address
 ECHO.
 ECHO To Quit this Ping press CTRL+C and then when asked to terminate the Batch File say No
 ECHO.
-SET /P CHOOSE= What Address do you want to PING?: 
+SET /P CHOOSE= [%date% @ %time%] What Address do you want to PING?: 
 ping /t %CHOOSE%
 GOTO end
 
