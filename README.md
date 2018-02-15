@@ -11,6 +11,8 @@ A Batch file that can be used to run ping,tracert and ipconfig tests to screen o
 >Added text "Running Trace Route..." to the trace route report so that user knows report running.
 >
 >Changed the file name and folder title structure to make it more readable.
+>
+>Added variable folder, use this to create folder for report storage. Also used for the new open folder option.
 
 ## Version: 2.0.3
 

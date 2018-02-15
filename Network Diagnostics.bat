@@ -79,29 +79,45 @@ ping /t %CHOOSE%
 GOTO end
 
 :r
-MKDIR C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
-CD C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
+SET folder=C:\Users\%username%\Desktop\network_diagnostic_results-%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
+
+MKDIR %folder%
+CD %folder%
+
 CLS
+
 ECHO Running tests and sending to file
 ECHO.
 ipconfig /all > IPCONFIG_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%.txt
 ECHO IPCONFIG saved
 ECHO.
-ping google.com > PING_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
+ping google.com > PING_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%.txt
 ECHO PING google.com saved
 ECHO.
-ping 8.8.8.8 > PINGDNS_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
+ping 8.8.8.8 > PINGDNS_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%.txt
 ECHO Ping 8.8.8.8 saved
 ECHO.
 ECHO Running Trace Route...
-tracert google.com > TRACERT_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%
+tracert google.com > TRACERT_%date:~-10,2%-%date:~-7,2%-%date:~-4,4%_%time:~-11,2%-%time:~-8,2%-%time:~-5,2%.txt
 ECHO TRACERT saved
 ECHO.
 ECHO All Files Saved to Desktop 
-GOTO end
+ECHO.
+ECHO.
+
+SET /P CHOOSE= do you want to open the folder now? y/n: 
+GOTO %CHOOSE%
 
 :x
 GOTO leave
+
+:y
+%SystemRoot%\explorer.exe %folder%
+GOTO end
+
+:n
+CLS
+GOTO start
 
 :end
 ECHO.
