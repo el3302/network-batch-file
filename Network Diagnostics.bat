@@ -1,6 +1,6 @@
 @ECHO OFF  
 
-REM Version             : 2.0.3
+REM Version             : 2.0.4
 REM Author              : Iain Mair
 REM Release Date        : 10th February 2018
 REM Github repository   : https://github.com/el3302/network-batch-file
