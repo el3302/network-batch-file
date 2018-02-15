@@ -12,7 +12,7 @@ A Batch file that can be used to run ping,tracert and ipconfig tests to screen o
 >
 >Changed the file name and folder title structure to make it more readable.
 >
->Added variable folder, use this to create folder for report storage. Also used for the new open folder option.
+>Added variable "folder", use this to create folder for report storage. Also used for the new open folder option.
 
 ## Version: 2.0.3
 
