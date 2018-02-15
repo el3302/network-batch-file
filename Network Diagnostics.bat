@@ -27,7 +27,7 @@ ECHO  x. exit testing
 ECHO.
 
 SET CHOOSE= " "
-SET /P CHOOSE=  [%date% @ %time%] Hello %USERNAME%, what do you want to do?: 
+SET /P CHOOSE=  [%date% @ %time%] Hello %username%, what do you want to do?: 
 GOTO %CHOOSE%
 
 :1
